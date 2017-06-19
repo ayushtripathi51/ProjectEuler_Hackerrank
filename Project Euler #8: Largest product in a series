@@ -1,0 +1,15 @@
+t=int(input())
+for i in range(0,t):
+    a=input()
+    x=input()
+    l=[]
+    a,b=a.split(" ")
+    a=int(a)
+    b=int(b)
+    for j in range(0,a-b):
+        prod=1
+        for k in range(j,j+b):
+            prod*=int(x[k])
+        l.append(prod)
+    l.sort()
+    print(l[len(l)-1])
