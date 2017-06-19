@@ -1,0 +1,14 @@
+l=[0]*1000010
+for i in range(100,1000):
+    for j in range(100,1000):
+        x=i*j
+        if(len(str(x))==6):
+            if(str(x)[::-1]==str(x)):
+                l[x]=1
+x=int(input())
+for i in range(0,x):
+    a=int(input())
+    for j in range(a-1,99999,-1):
+        if(l[j]==1):
+            print(j)
+            break
