@@ -1,0 +1,15 @@
+n=int(input())
+for i in range(0,n):
+    x=int(input())
+    a=2
+    count=0
+    sum=1
+    l=[2,3,5,7,11,13,17,19,23,29,31,37]
+    while(a<=x):
+        for i in range(0,len(l)):
+            b=a
+            while(b%l[i]==0 and sum%a!=0):
+                sum*=l[i]
+                b=b/l[i]
+        a+=1
+    print(sum)
