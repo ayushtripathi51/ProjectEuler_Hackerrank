@@ -1,0 +1,15 @@
+import math
+import sys
+t=int(input())
+def fun(n):
+    i = 2
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+    return n
+for i in range(0,t):
+    x=int(input())  
+    a=fun(x)
+    print(a)
