@@ -1,0 +1,23 @@
+l=[]
+sum=[]
+for i in range(0,20):
+    x=input()
+    l.append(x.split(" "))
+for i in range(0,17):
+    for j in range(0,17):
+        sum1=1
+        sum2=1
+        sum3=1
+        sum4=1
+        for k in range(0,4):
+            sum1*=int(l[i-3][j+k])
+            sum2*=int(l[i+k][j-3])
+            sum3*=int(l[i+k][j+k])
+            sum4*=int(l[(i-k+3)][(k+j)])
+            #sum4*=int(l[(i+k)][(-k+j+3)])
+        sum.append(sum1)
+        sum.append(sum2)
+        sum.append(sum3)
+        sum.append(sum4)
+sum.sort()
+print(sum[len(sum)-1])
