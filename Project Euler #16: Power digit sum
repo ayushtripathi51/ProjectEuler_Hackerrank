@@ -1,0 +1,10 @@
+t=int(input())
+for i in range(0,t):
+    x=int(input())
+    a=2**x
+    sum=0
+    while(a!=0):
+        z=a%10
+        sum+=z
+        a=a//10
+    print(sum)
