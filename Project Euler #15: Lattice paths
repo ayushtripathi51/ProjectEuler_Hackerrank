@@ -1,0 +1,17 @@
+def fac(n):
+    fac=1
+    for i in range(1,n+1):
+        fac*=i
+    return(fac)
+t=int(input())
+for i in range(0,t):
+    x=input()
+    a,b=x.split(" ")
+    a=int(a)
+    b=int(b)
+    p=fac(a+b)
+    q=fac(a)
+    r=fac(b)
+    ans=p//(q*r)
+    ans=ans%1000000007
+    print(ans)
